@@ -1,0 +1,24 @@
+CLÍNICAS NOVA VIDA — SITE PORTÁTIL
+
+Os arquivos em dist funcionam em hospedagem estática, sem GPT e sem servidor próprio.
+Não inclui agenda, contatos privados, credenciais ou configuração do JARVIS.
+
+RENDER (site estático gratuito, sujeito às cotas do provedor):
+1. Enviar este projeto para um repositório GitHub.
+2. No Render, criar Static Site apontando para o repositório.
+3. Diretório publicado: dist. No primeiro deploy, comando: true.
+4. Copiar a URL HTTPS real atribuída ao site para SITE_URL.
+5. Alterar comando para python3 prepare-deploy.py e publicar novamente.
+O render.yaml permite configurar o projeto via Blueprint; SITE_URL precisa ser a URL real.
+
+CLOUDFLARE PAGES:
+Enviar os arquivos de dist por Direct Upload. Depois definir SITE_URL,
+executar python3 prepare-deploy.py e reenviar dist para incluir canonical e sitemap.
+
+GOOGLE:
+Título, descrição e dados estruturados já presentes; robots permite rastreamento.
+Canonical e sitemap são gerados após conhecer o endereço real, sem inventar domínio.
+Verificar propriedade no Search Console e enviar /sitemap.xml após publicação.
+Analytics/Ads não estão ativos: precisam de IDs reais e configuração própria.
+Não enviar nomes, telefones, mensagens, condição de saúde ou texto do WhatsApp a rastreadores.
+Não há garantia de posição ou prazo para aparecer nas buscas.
